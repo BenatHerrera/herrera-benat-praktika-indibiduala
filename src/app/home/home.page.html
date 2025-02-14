@@ -11,14 +11,21 @@
     </ion-toolbar>
   </ion-header>
 
-  <div>
-    <h2>Crypto Report</h2>
-    <canvas id="barChart" class="chart"></canvas>
-    <canvas id="lineChart" class="chart"></canvas>
-    <canvas id="pieChart" class="chart"></canvas>
-
-    <!-- Botón con diseño mejorado -->
-    <ion-button expand="full" color="primary" (click)="generatePDF()" class="download-button">
-  PDf-an Deskargatu    </ion-button>
+  <div class="report-container">
+    <h2>API Report</h2>
+    <!-- Gráfico de barras -->
+    <div class="chart-container">
+      <canvas id="barChart"></canvas>
+    </div>
+    <!-- Gráfico de líneas -->
+    <div class="chart-container">
+      <canvas id="lineChart"></canvas>
+    </div>
+    <!-- Gráfico de tarta -->
+    <div class="chart-container">
+      <canvas id="pieChart"></canvas>
+    </div>
+    <!-- Botón para generar PDF -->
+    <ion-button expand="full" color="primary" (click)="generatePDF()"> PDFan Deskargatu</ion-button>
   </div>
 </ion-content>

@@ -1,14 +1,29 @@
-/* Estilo para los gráficos */
-.chart {
-  width: 100% !important;
-  max-width: 400px;
-  height: 250px;
-  margin: 10px auto;
+.report-container {
+  padding: 16px;
+  text-align: center;
 }
 
-/* Estilo para el botón */
-.download-button {
-  margin-top: 20px; /* Separación desde los gráficos */
-  font-weight: bold; /* Hacer el texto más visible */
-  text-transform: uppercase; /* Texto en mayúsculas */
+.chart-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;  /* Limita el tamaño máximo de los gráficos */
+  margin: 0 auto 20px auto;  /* Centra los gráficos */
+}
+
+canvas {
+  width: 100% !important;  /* Asegura que el canvas se ajuste al contenedor */
+  height: auto !important;  /* Mantiene la relación de aspecto de los gráficos */
+}
+
+/* Estilos para el botón de descarga */
+ion-button {
+  margin-top: 20px;
+  width: 100%;  /* Hace que el botón ocupe todo el ancho en dispositivos pequeños */
+}
+
+/* Responsividad adicional para pantallas pequeñas */
+@media (max-width: 600px) {
+  .chart-container {
+    max-width: 100%;  /* Los gráficos se adaptarán al 100% del ancho en pantallas pequeñas */
+  }
 }
